@@ -1,0 +1,85 @@
+body{
+font-family: Arial;
+margin:0;
+background:#f4fdfd;
+text-align:center;
+}
+
+/* HEADER */
+
+header{
+background:#004c4c;
+color:white;
+padding:40px;
+}
+
+header h1{
+margin:0;
+font-size:36px;
+letter-spacing:2px;
+}
+
+.tagline{
+font-style:italic;
+font-size:18px;
+margin-top:10px;
+}
+
+/* NAVIGATION */
+
+nav{
+background:#e0f7f7;
+padding:15px;
+}
+
+nav button{
+background:white;
+border:none;
+padding:10px 15px;
+margin:5px;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+}
+
+nav button:hover{
+background:#b2f0f0;
+}
+
+/* PAGES */
+
+.page{
+display:none;
+background:white;
+margin:20px;
+padding:20px;
+border-radius:10px;
+box-shadow:0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* INPUTS */
+
+input{
+padding:10px;
+margin:10px;
+width:200px;
+}
+
+/* LAB CARD */
+
+.lab-card{
+background:#f7ffff;
+padding:15px;
+margin:10px;
+border-radius:8px;
+}
+/* HOME TEXT */
+
+.home-text{
+color:#000;
+font-style:italic;
+font-size:18px;
+line-height:1.6;
+max-width:600px;
+margin:auto;
+}
