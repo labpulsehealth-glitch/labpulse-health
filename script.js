@@ -145,8 +145,9 @@ else if(type==="report"){
 info="Digital lab reports allow patients to safely store and access their medical test results anytime.";
 }
 
-document.getElementById("testInfo").innerText = info;
-
+let box = document.getElementById("testInfo");
+box.innerText = info;
+box.classList.add("show");
 document.querySelector(".ai-box").scrollIntoView({behavior:"smooth"});
 
 }
