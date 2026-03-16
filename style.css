@@ -85,3 +85,31 @@ max-width:700px;
 margin:auto;
 margin-top:30px;
 }
+.ai-box{
+background:white;
+padding:25px;
+margin:40px auto;
+border-radius:10px;
+max-width:600px;
+box-shadow:0 3px 8px rgba(0,0,0,0.1);
+}
+
+.ai-box h2{
+color:#004c4c;
+margin-bottom:10px;
+}
+
+.ai-box input{
+padding:12px;
+margin:10px;
+width:200px;
+}
+
+.ai-box button{
+background:#004c4c;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:6px;
+cursor:pointer;
+}
