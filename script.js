@@ -71,3 +71,49 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 
 });
+function interpretResult(){
+
+let test = document.getElementById("testName").value.toLowerCase();
+let value = document.getElementById("testValue").value;
+
+let result = "";
+
+if(test === "hemoglobin"){
+
+if(value < 12){
+result = "Your hemoglobin appears low. This may suggest anemia. Consider consulting a doctor.";
+}
+
+else if(value >= 12 && value <= 16){
+result = "Your hemoglobin is within the normal range.";
+}
+
+else{
+result = "Your hemoglobin appears high. It may be good to discuss this with a healthcare professional.";
+}
+
+}
+
+else if(test === "glucose"){
+
+if(value < 70){
+result = "Your blood glucose seems low. Please consult a doctor if you feel symptoms.";
+}
+
+else if(value <= 100){
+result = "Your glucose level appears normal.";
+}
+
+else{
+result = "Your glucose level is elevated. Consider medical advice.";
+}
+
+}
+
+else{
+result = "This test is not yet in the database. Please consult a healthcare professional.";
+}
+
+document.getElementById("aiResult").innerText = result;
+
+}
