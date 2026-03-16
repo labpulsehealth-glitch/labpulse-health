@@ -117,3 +117,36 @@ result = "This test is not yet in the database. Please consult a healthcare prof
 document.getElementById("aiResult").innerText = result;
 
 }
+function showTestInfo(type){
+
+let info="";
+
+if(type==="blood"){
+info="Blood analysis includes tests like hemoglobin, glucose, and white blood cell count. Doctors use these to check anemia, infections, and general health.";
+}
+
+else if(type==="microscope"){
+info="Microscope testing is used to examine samples like blood, urine, or stool for parasites, bacteria, or abnormal cells.";
+}
+
+else if(type==="culture"){
+info="Culture tests help identify bacteria or fungi causing infections so doctors can choose the right treatment.";
+}
+
+else if(type==="sample"){
+info="Sample collection involves taking blood, urine, or other body samples for laboratory testing.";
+}
+
+else if(type==="dna"){
+info="Genetic testing analyzes DNA to detect inherited conditions or mutations.";
+}
+
+else if(type==="report"){
+info="Digital lab reports allow patients to safely store and access their medical test results anytime.";
+}
+
+document.getElementById("testInfo").innerText = info;
+
+document.querySelector(".ai-box").scrollIntoView({behavior:"smooth"});
+
+}
