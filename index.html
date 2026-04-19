@@ -108,7 +108,9 @@
 
   <!-- Firebase FIRST -->
 <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-app.js";
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+  import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
   const firebaseConfig = {
     apiKey: "AIzaSyBdurMGIYSPrBdhS2Q4yNjV0-KnO8p-CFE",
@@ -120,7 +122,11 @@
   };
 
   const app = initializeApp(firebaseConfig);
-</script>
+
+  // 🔥 IMPORTANT: expose services to your app
+  window.auth = getAuth(app);
+  window.db = getFirestore(app);
+  </script>
 
 <!-- THEN your script -->
 <script src="script.js"></script>
