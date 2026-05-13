@@ -1,8 +1,4 @@
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } 
-from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-document.addEventListener("DOMContentLoaded", function() {
-
-  // ---------- PAGE NAVIGATION ----------
+ // ---------- PAGE NAVIGATION ----------
   window.showSection = function(section) {
     let pages = document.querySelectorAll(".page");
     pages.forEach(function(page) {
@@ -160,33 +156,4 @@ window.signUp = function () {
     .catch((error) => {
       document.getElementById("authMsg").innerText = error.message;
     });
-};
-
-// LOGIN
-window.login = function () {
-  let email = document.getElementById("email").value;
-  let password = document.getElementById("password").value;
-
-  signInWithEmailAndPassword(window.auth, email, password)
-    .then(() => {
-      document.getElementById("authMsg").innerText = "Login successful!";
-    })
-    .catch((error) => {
-      document.getElementById("authMsg").innerText = error.message;
-    });
-};
-  import { collection, addDoc } 
-from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-  window.saveResult = async function(test, value) {
-  try {
-    await addDoc(collection(window.db, "results"), {
-      test: test,
-      value: value,
-      date: new Date()
-    });
-
-    alert("Saved successfully!");
-  } catch (error) {
-    alert(error.message);
-  }
 };
